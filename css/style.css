@@ -234,6 +234,7 @@ header {
 .card .title {
   text-align: center;
   margin-bottom: 10px;
+  transition: all 0.3s ease-in-out 0s;
 }
 
 .card-content {
@@ -244,9 +245,9 @@ header {
 }
 
 .card .card-overlay {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
-  height: 99%;
+  height: 100%;
   width: 100%;
   left: 0;
   top: 0;
@@ -269,8 +270,7 @@ header {
 .card-details {
   position: absolute;
   text-align: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 0 1rem;
   width: 100%;
   top: 50%;
   left: 50%;
@@ -283,6 +283,10 @@ header {
   transition: all 0.3s ease-in-out 0s;
 }
 
+.card:hover .title {
+  opacity: 0;
+}
+
 .card:hover .card-details {
   top: 50%;
   left: 50%;
@@ -292,7 +296,6 @@ header {
 .card-details h3 {
   color: #fff;
   margin-bottom: 0.5rem;
-  text-transform: uppercase;
 }
 
 .card-details p {
@@ -302,35 +305,6 @@ header {
 .fadeIn-bottom {
   top: 80%;
 }
-
-/* .featured img {
-  width: 100%;
-} */
-
-/* .card-inside {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 5px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.527);
-  color: #fff;
-}
-
-.card::after {
-  content: "";
-  width: 0;
-  height: 4px;
-  display: block;
-  background: #d83535;
-  transition: width 0.5s;
-  position: absolute;
-  bottom: 0;
-}
-
-.card:hover::after {
-  width: 100%;
-} */
 
 h2.highlight {
   display: inline-block;
