@@ -306,6 +306,10 @@ header {
   top: 80%;
 }
 
+.fadeIn-top {
+  top: 20%;
+}
+
 h2.highlight {
   display: inline-block;
   width: 100%;
