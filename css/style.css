@@ -228,17 +228,86 @@ header {
 }
 
 .card {
-  position: relative;
   cursor: pointer;
-  /* min-width: 600px; */
-  max-width: 448px;
 }
 
-.featured img {
+.card .title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  position: relative;
+  max-width: 448px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.card .card-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 99%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.card-content:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-img {
   width: 100%;
 }
 
-.card-inside {
+.card-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.card:hover .card-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.card-details h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.card-details p {
+  color: #fff;
+}
+
+.fadeIn-bottom {
+  top: 80%;
+}
+
+/* .featured img {
+  width: 100%;
+} */
+
+/* .card-inside {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -261,7 +330,7 @@ header {
 
 .card:hover::after {
   width: 100%;
-}
+} */
 
 h2.highlight {
   display: inline-block;
@@ -289,16 +358,16 @@ h2.highlight {
 }
 
 .overview-content {
-  /* max-width: 940px; */
-  /* min-width: 480px; */
   width: fit-content;
-  text-align: justify;
   max-width: 45%;
 }
 
 .overview-content h3 {
-  /* text-decoration: underline; */
   margin-bottom: 2rem;
+}
+
+.overview-content p {
+  text-align: justify;
 }
 
 .overview-item:nth-child(2) {
@@ -344,7 +413,6 @@ footer {
 @media only screen and (max-width: 768px) {
   .container {
     background: #fff;
-    margin: 0 auto;
   }
   .margin-bottom {
     margin-bottom: 1rem;
@@ -361,5 +429,11 @@ footer {
   .overview-item {
     margin: 0;
     padding: 0;
+    border-bottom: 1px solid rgb(194, 193, 193);
+    padding: 15px;
+  }
+
+  h3 {
+    line-height: normal;
   }
 }
