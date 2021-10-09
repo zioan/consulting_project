@@ -308,12 +308,13 @@ h2.highlight {
 footer {
   background: #333;
   color: #fff;
-  width: 100vw;
+  width: 100%;
 }
 
 .footer-nav ul {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 2rem;
   color: #fff;
 }
@@ -357,8 +358,8 @@ footer {
     padding-bottom: 1rem;
   }
 
-  /* .overview-item {
+  .overview-item {
     margin: 0;
     padding: 0;
-  } */
+  }
 }
