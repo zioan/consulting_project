@@ -192,7 +192,7 @@ header {
   left: 0;
   width: 100vw;
   height: 100%;
-  background: rgba(51, 51, 51, 0.5);
+  background: rgba(51, 51, 51, 0.7);
   z-index: -1;
 }
 
@@ -314,9 +314,9 @@ header {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.card:hover .title {
+/* .card:hover .title {
   opacity: 0;
-}
+} */
 
 .card:hover .card-details {
   top: 50%;
@@ -444,4 +444,29 @@ footer {
   h3 {
     line-height: normal;
   }
+}
+
+/* ABOUT PAGE */
+.intro-about {
+  /* width: 100vw; */
+  height: 900px;
+  background: url("../img/meeting.jpg") no-repeat center center/cover;
+}
+
+.overview-about {
+  display: flex;
+  flex-direction: row;
+}
+
+.overview-about-item {
+  flex-direction: column;
+  width: 500px;
+}
+
+.overview-about-item img {
+  display: flex;
+}
+
+.overview-item:nth-child(2) {
+  flex-direction: column;
 }
